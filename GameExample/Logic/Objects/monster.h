@@ -15,6 +15,10 @@ public:
         : GameObject(name) {
     }
 
+    virtual void draw()  {
+        cout << "Monster(" << getName() << ") is at " << getX() << ":" << getY() << endl;
+    }
+
 };
 
 #endif // MONSTER_H

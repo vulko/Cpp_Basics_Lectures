@@ -7,11 +7,25 @@
 
 using namespace std;
 
+void drawMe(IDrawable *obj) {
+    obj->draw();
+}
+
+void drawAll(IDrawable *obj[2]) {
+    for (int i = 0; i < 2; ++i) {
+        obj[i]->draw();
+    }
+}
+
 int main(int argc, char *argv[])
 {
     Player mPlayer("SuperHero");
     Monster mMonster("Bear");
     mMonster.setPos(1, 1);
+
+    IDrawable* drawables[2];
+    drawables[0] = &mPlayer;
+    drawables[1] = &mMonster;
 
     char userInput = 0;
     while (userInput != 'x') {
@@ -34,7 +48,7 @@ int main(int argc, char *argv[])
                 cout << mPlayer.getName() << " will fight " << mMonster.getName();
             }
 
-            mPlayer.draw();
+            drawAll(drawables);
         }
 
     return 0;

@@ -16,10 +16,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    gameobject.cpp \
-    player.cpp \
-    gameboard.cpp \
-    monster.cpp \
     Logic/gameboard.cpp \
     Logic/Objects/gameobject.cpp \
     Logic/Objects/monster.cpp \
@@ -31,11 +27,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    gameobject.h \
-    player.h \
-    gameboard.h \
-    monster.h \
     Logic/gameboard.h \
     Logic/Objects/gameobject.h \
     Logic/Objects/monster.h \
-    Logic/Objects/player.h
+    Logic/Objects/player.h \
+    Logic/Objects/idrawable.h

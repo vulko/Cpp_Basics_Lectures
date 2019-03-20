@@ -1,7 +1,7 @@
 #ifndef GAMEBOARD_H
 #define GAMEBOARD_H
 
-#include "gameobject.h"
+#include "Objects/gameobject.h"
 
 class GameBoard {
 public:
@@ -9,7 +9,7 @@ public:
     static const int BOARD_WIDTH = 50;
 
 private:
-    GameObject mBoard[BOARD_HEIGHT][BOARD_WIDTH];
+//    GameObject mBoard[BOARD_HEIGHT][BOARD_WIDTH];
 
     GameBoard();
 

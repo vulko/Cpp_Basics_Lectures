@@ -2,10 +2,14 @@
 #define GAMEOBJECT_H
 
 #include <iostream>
+#include "idrawable.h"
 
 using namespace std;
 
-class GameObject {
+//class PlayerAvatar : public IDrawable {
+//};
+
+class GameObject : public IDrawable {
 private:
     int posX;
     int posY;
@@ -13,15 +17,12 @@ private:
 
 public:
     GameObject() {}
+    virtual ~GameObject() {}
 
     GameObject(string name)
         : posX(0),
           posY(0),
           mName(name) {}
-
-    void draw() {
-        cout << mName << " is at " << getX() << ":" << getY() << endl;
-    }
 
     void setPos(int x, int y) {
         posX = x;
@@ -31,6 +32,7 @@ public:
     int getX() { return posX; }
     int getY() { return posY; }
     string getName() { return mName; }
+
 };
 
 #endif // GAMEOBJECT_H

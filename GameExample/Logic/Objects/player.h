@@ -11,6 +11,10 @@ public:
         : GameObject(name) {
     }
 
+    virtual void draw()  {
+        cout << getName() << " is at " << getX() << ":" << getY() << endl;
+    }
+
     void move(int x, int y) {
         setPos(getX() + x, getY() + y);
     }
