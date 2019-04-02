@@ -2,6 +2,7 @@
 #define GAMEOBJECT_H
 
 #include <iostream>
+#include <string>
 #include "idrawable.h"
 
 using namespace std;

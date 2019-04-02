@@ -18,6 +18,7 @@ public:
     void move(int x, int y) {
         setPos(getX() + x, getY() + y);
     }
+
 };
 
 #endif // PLAYER_H

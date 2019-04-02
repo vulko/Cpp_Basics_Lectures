@@ -19,7 +19,8 @@ SOURCES += \
     Logic/gameboard.cpp \
     Logic/Objects/gameobject.cpp \
     Logic/Objects/monster.cpp \
-    Logic/Objects/player.cpp
+    Logic/Objects/player.cpp \
+    Logic/game.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -31,4 +32,5 @@ HEADERS += \
     Logic/Objects/gameobject.h \
     Logic/Objects/monster.h \
     Logic/Objects/player.h \
-    Logic/Objects/idrawable.h
+    Logic/Objects/idrawable.h \
+    Logic/game.h
