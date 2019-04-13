@@ -3,6 +3,9 @@
 
 #include <thread>
 #include <iostream>
+#include <vector>
+#include "Objects/monster.h"
+#include "Objects/player.h"
 
 using namespace std;
 
@@ -22,6 +25,7 @@ enum GameState
    Stopped
 };
 
+typedef std::vector<IDrawable*> DrawableVector;
 
 class Game
 {
@@ -34,12 +38,21 @@ public:
     void start() { mState = GameState::Started; }
     void stop() { mState = GameState::Stopped; }
 
+    Player* getPlayer() { return mPlayer; }
+    Monster* getMonster() { return mMonster; }
+
 private:
     thread* mGameThread;
     void gameLoop();
     GameState mState = GameState::Unknown;
 
     bool mIsGameLoopRunning = true;
+
+    Player* mPlayer = new Player("SuperHero");
+    Monster* mMonster = new Monster("Bear");
+    DrawableVector mDrawables;
+
+    void drawAll();
 
 };
 

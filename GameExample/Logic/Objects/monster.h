@@ -19,6 +19,9 @@ public:
         cout << "Monster(" << getName() << ") is at " << getX() << ":" << getY() << endl;
     }
 
+    void move(int x, int y) {
+        setPos(getX() + x, getY() + y);
+    }
 };
 
 #endif // MONSTER_H
